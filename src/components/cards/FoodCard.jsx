@@ -1,11 +1,14 @@
 import Link from "next/link";
 import CartButton from "../buttons/CartButton";
+import style from "@/app/foods/foods.module.css";
 
 export default function FoodCard({ food }) {
   const { title, foodImg, category, price, id } = food;
 
   return (
-    <div className="border rounded-xl p-4 shadow hover:shadow-lg transition">
+    <div
+      className={`border rounded-xl p-4 shadow hover:shadow-lg transition ${style.bgred}`}
+    >
       <img
         src={foodImg}
         alt={title}
