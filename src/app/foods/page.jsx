@@ -2,6 +2,7 @@ import FoodCard from '@/components/cards/FoodCard';
 import React from 'react';
 import CartItems from './CartItems';
 import InputSearch from '@/components/InputSearch';
+// import { metadata } from './../layout';
 
 
 
@@ -13,6 +14,13 @@ const getFoods = async(search) => {
     await new Promise((resolve) => setTimeout(resolve, 3000))
     return data.foods || [];
 }
+
+export const metadata = {
+
+  title: "All Foods",
+  description: ""
+}
+
 
 const FoodsPage = async({searchParams}) => {
   const {search = ""} = await searchParams

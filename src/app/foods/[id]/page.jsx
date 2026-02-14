@@ -1,6 +1,22 @@
 import React from 'react';
 
 
+export async function generateMetadata({params}){
+  const {id} = await params;
+
+  const res = await fetch(`https://taxi-kitchen-api.vercel.app/api/v1/foods/${id}`)
+  const {details = {}} = await res.json();
+  // console.log(data)
+  return {
+    title: details.title,
+    generator: "Next.js",
+    applicationName: "Next.js",
+    referrer: "origin-when-cross-origin",
+    keywords: ["Next.js", "React.js"]
+  }
+
+
+}
 
 
 const getSingleFood = async(id) => {
