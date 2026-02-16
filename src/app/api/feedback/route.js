@@ -1,6 +1,6 @@
 const feedback = [
     {
-        message: ""
+        message: "Hello Next Js"
     }
 ]
 export async function GET (requset){
